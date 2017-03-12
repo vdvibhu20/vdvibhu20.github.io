@@ -1,0 +1,91 @@
+body{
+	background: green;
+	margin: 0px 0px;
+}
+
+#black{
+	background: black;
+	width: 50%;
+	height: 100em;
+	float: left;
+	z-index: -1;
+	position: relative;
+}
+
+#white{
+	background: white;
+	width: 50%;
+	height: 100em;
+	float: left;
+	z-index: -1;
+	position: relative;
+}
+
+/*.container{
+	z-index: 0;
+	margin-top: 500px;
+}
+*/
+#terminalBox{
+	position: absolute;
+	/*margin: 0 auto;*/
+	/*top: 50%;*/
+	height: 50em;
+	width: 50em;
+	left: 28%;
+}
+
+#terminal{
+	position: absolute;
+	z-index: 0;
+	height: 30em;
+	width: 100%;
+	/*max-width: 50%;*/
+	overflow: scroll;
+	background-color: rgba(55, 10, 3, 0.9);
+	color: rgb(255, 255, 255);
+	margin-bottom: 0px;
+	margin-top: 400px;
+}
+
+.name{
+	color: white;
+	position: absolute;
+	z-index: 0;
+	margin-top: 100px;
+	left: 35.75%;
+	font-size: 6em;
+}
+
+.heading{
+	margin-bottom: 0px;
+}
+
+p{
+	text-decoration-color: rgb(2, 255, 255);
+	font-family: monospace;
+	margin-bottom: 0px;
+}
+
+#demo{
+	margin-bottom: 0px;
+}
+
+#input{
+	border: none;
+	background-color: rgba(55, 10, 3, 0.1);
+	font-family: monospace;
+	margin-left: 4.5px;
+	padding-left: 0px;
+}
+
+#newlyAdded{
+	margin: 0px 0px;
+	font-family: monospace;
+}
+
+.user{
+	color: rgb(10, 225, 5);
+	font-family: monospace;
+	margin: 0px 0px;
+}

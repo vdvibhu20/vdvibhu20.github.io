@@ -1,0 +1,45 @@
+html,body{
+	background: blue;
+	height: 100%;
+}
+
+#terminal{
+	height: 700px;
+	overflow: scroll;
+	background-color: rgba(55, 10, 3, 1);
+	color: rgb(255, 255, 255);
+	margin-bottom: 0px;
+}
+
+.heading{
+	margin-bottom: 0px;
+}
+
+p{
+	text-decoration-color: rgb(2, 255, 255);
+	font-family: monospace;
+	margin-bottom: 0px;
+}
+
+#demo{
+	margin-bottom: 0px;
+}
+
+#input{
+	border: none;
+	background-color: rgba(55, 10, 3, 1);
+	font-family: monospace;
+	margin-left: 4.5px;
+	padding-left: 0px;
+}
+
+#newlyAdded{
+	margin: 0px 0px;
+	font-family: monospace;
+}
+
+.user{
+	color: rgb(10, 225, 5);
+	font-family: monospace;
+	margin: 0px 0px;
+}
