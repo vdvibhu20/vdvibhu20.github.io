@@ -5,6 +5,7 @@ var counter= 0;
 var counter2;
 var queryRecord= [""];
 var terminalClone= $("#display").clone();
+console.log("hi");
 
 
 function queryProcess(event){
@@ -25,7 +26,7 @@ function queryProcess(event){
 		else if(event.which== '40'){
 			down();
 		}
-		console.log("hi");
+		// console.log("hi");
 }
 
 function up(){
@@ -50,19 +51,24 @@ function scrollToBottom(){
 
 function clear(){
 		$("#display").replaceWith(terminalClone.clone());
-		console.log(terminalClone);
+		// $("#display").append("<p id=\"demo\"></p>");
 }
 
 
 function queryResponse(){
 	choices= {
-		skills: "HTML, JavaScript ......",
-		interests: "Music, Guitar, Photography",
-		about: "I am undergraduate B.E student..",
-		projects: "Nothing"
+		help: "about for about<br> skills for skills<br> course for courses<br> project  for projects<br> interests for interests<br> contact for contact details",
+		skills: "C|C++<br> JavaScript| HTML5| CSS| MongoDB| SQL<br> Bootstrap| Semantic UI<br> jQuery| node.js<br> ADOBE PHOTOSHOP<br> PROGRAMMING TOOLS AND OS<br> Sublime Text| Git| Cloud9| Linux| Windows",
+		interests: "Music| Guitar| Yoga",
+		about: "I am an undergraduate B.Tech student at the Department of Information Technology in Maharaja Surajmal Institute of Technology",
+		projects: "<strong>--Contact Directory| August(2016)</strong><br>* Implemented a TRIE which can store contact numbers with their names<br>* Other Data Structures offer high time complexity whereas tries can handle this in constant time.<br> <strong>--Incredible India Website| July(2016)</strong><br> * Created a tour website for tourist spots in India.<br>* Frontend: HTML5, CSS, JavaScript| Backend: JavaScript, node.js, MongoDB",
+		courses: "<strong>--Algorithms: Design and Analysis| Stanford University</strong><br> * Learned algorithms involving Graphs, Trees, Greedy Algorithms, and other Data Structures.<br> <strong>--WEB Development| UDEMY</strong><br> * HTML5| CSS| JavaScript| node.js| MongoDB",
+		contact: "Mobile: 9958397988<br> Email: vdvibhu20@gmail.com"
 	}
+
+
 	switch(request){
-		case "help":  		toAppend= "about: for about"
+		case "help":  		toAppend= choices.help;
 							break;
 
 		case "skills": 		toAppend= choices.skills;
@@ -74,13 +80,19 @@ function queryResponse(){
 		case "about": 		toAppend= choices.about;
 							break;
 		
-		case "projects": 	toAppend= choices.projects;
+		case "project": 	toAppend= choices.projects;
 							break;
 
 		case "clear": 		clear();
-							break;						
+							break;	
+
+		case "course":		toAppend= choices.courses;
+							break;	
 		
-		default: 		toAppend= "Enter a valid choice or enter help"
+		case "contact": 	toAppend= choices.contact;
+							break;																	
+		
+		default: 		toAppend= "--"+ request+ ": command not found"
 	}
 
 

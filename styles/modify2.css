@@ -1,5 +1,6 @@
 html,body{
 	height: 100%;
+	/*overflow-y: scroll;*/
 }
 
 body{
@@ -10,7 +11,7 @@ body{
 .black{
 	background: black;
 	width: 50%;
-	height: 100vh;
+	height: inherit;
 	float: left;
 	z-index: -1;
 	position: fixed;
@@ -21,7 +22,7 @@ body{
 .white{
 	background: white;
 	width: 50%;
-	height: 100%;
+	height: inherit;
 	float: left;
 	z-index: -1;
 	position: fixed;
@@ -35,7 +36,7 @@ body{
 	/*margin-top: 500px;
 	position: absolute;
 	margin-top: 0 auto;*/
-	margin: 10%;
+	margin: 5%;
 }
 
 /*.row{
@@ -73,6 +74,16 @@ body{
 	box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.35);
 }
 
+.whiteButton{
+	color: white;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.55)
+}
+
+.blackButton{
+	color: black;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.55)
+}
+
 
 .heading{
 	margin-bottom: 0px;
@@ -92,6 +103,8 @@ p{
 	border: none;
 	background-color: rgba(55, 10, 3, 0.1);
 	font-family: monospace;
+	width: inherit;
+	/*height: inherit;*/
 	margin-left: 4.5px;
 	padding-left: 0px;
 }
@@ -105,4 +118,12 @@ p{
 	color: rgb(10, 225, 5);
 	font-family: monospace;
 	margin: 0px 0px;
+}
+
+.row:nth-child(3){
+	margin-top: 35px;
+}
+
+.nopadding{
+	padding: 0;
 }
