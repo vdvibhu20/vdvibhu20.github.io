@@ -4,6 +4,7 @@ var toAppend;
 var counter= 0;
 var counter2;
 var queryRecord= [""];
+var terminalClone= $("#display").clone();
 
 
 function queryProcess(event){
@@ -47,6 +48,11 @@ function scrollToBottom(){
 		$("#input").val('');
 }
 
+function clear(){
+		$("#display").replaceWith(terminalClone.clone());
+		console.log(terminalClone);
+}
+
 
 function queryResponse(){
 	choices= {
@@ -70,6 +76,9 @@ function queryResponse(){
 		
 		case "projects": 	toAppend= choices.projects;
 							break;
+
+		case "clear": 		clear();
+							break;						
 		
 		default: 		toAppend= "Enter a valid choice or enter help"
 	}
@@ -78,9 +87,9 @@ function queryResponse(){
 		$("#display").append("<p id=\"newlyAdded\"><span class=\"user\"> savvy@user:~$</span> "+request+ "<br>"+toAppend+ "</p>");
 		scrollToBottom();
 
-		for(var i=0; i<= counter; i++){
-			console.log(queryRecord[i]);
-		}
+		// for(var i=0; i<= counter; i++){
+		// 	console.log(queryRecord[i]);
+		// }
 
 
 }

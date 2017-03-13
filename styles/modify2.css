@@ -1,61 +1,78 @@
+html,body{
+	height: 100%;
+}
+
 body{
 	background: green;
 	margin: 0px 0px;
 }
 
-#black{
+.black{
 	background: black;
 	width: 50%;
-	height: 100em;
+	height: 100vh;
 	float: left;
 	z-index: -1;
-	position: relative;
+	position: fixed;
+	left: 0px;
+	top: 0px
 }
 
-#white{
+.white{
 	background: white;
 	width: 50%;
-	height: 100em;
+	height: 100%;
 	float: left;
 	z-index: -1;
-	position: relative;
+	position: fixed;
+	display: block;
+	left: 50%;
+	top: 0px;
 }
 
-/*.container{
+.container{
 	z-index: 0;
-	margin-top: 500px;
-}
-*/
-#terminalBox{
+	/*margin-top: 500px;
 	position: absolute;
-	/*margin: 0 auto;*/
-	/*top: 50%;*/
-	height: 50em;
-	width: 50em;
-	left: 28%;
+	margin-top: 0 auto;*/
+	margin: 10%;
 }
 
-#terminal{
-	position: absolute;
-	z-index: 0;
-	height: 30em;
-	width: 100%;
-	/*max-width: 50%;*/
-	overflow: scroll;
-	background-color: rgba(55, 10, 3, 0.9);
-	color: rgb(255, 255, 255);
-	margin-bottom: 0px;
-	margin-top: 400px;
+/*.row{
+	margin: auto;
 }
-
+.col{
+	margin: auto;
+}*/
 .name{
 	color: white;
-	position: absolute;
+	/*position: absolute;*/
 	z-index: 0;
-	margin-top: 100px;
-	left: 35.75%;
+	width: 100%;
+	margin: 0 auto;
+	/*left: 35.75%;*/
 	font-size: 6em;
+	text-align: center;
+	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35)
 }
+
+
+#terminal{
+	/*position: absolute;*/
+	z-index: 0;
+	height: 400px;
+	width: 50%;
+	/*max-width: 50%;*/
+	overflow: scroll;
+	/*background-color: rgba(55, 10, 3, 0.95);*/
+	background-color: rgba(0, 0, 0, 0.95);
+	color: rgb(255, 255, 255);
+	/*margin-bottom: 0px;
+	margin-top: 400px;*/
+	margin: 20px auto;
+	box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.35);
+}
+
 
 .heading{
 	margin-bottom: 0px;
