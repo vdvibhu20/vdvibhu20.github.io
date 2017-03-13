@@ -90,13 +90,16 @@ function queryResponse(){
 							break;	
 		
 		case "contact": 	toAppend= choices.contact;
-							break;																	
+							break;
+		
+		case "": 			toAppend="";
+							break;																								
 		
 		default: 		toAppend= "--"+ request+ ": command not found"
 	}
 
 
-		$("#display").append("<p id=\"newlyAdded\"><span class=\"user\"> savvy@user:~$</span> "+request+ "<br>"+toAppend+ "</p>");
+		$("#display").append("<p id=\"newlyAdded\"><span class=\"user\"> <strong>savvy@</strong>user:~$</span> "+request+ "<br>"+toAppend+ "</p>");
 		scrollToBottom();
 
 		// for(var i=0; i<= counter; i++){

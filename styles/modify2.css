@@ -1,17 +1,19 @@
 html,body{
-	height: 100%;
-	/*overflow-y: scroll;*/
+	height: 100vh;
+	overflow-y: auto;
 }
 
 body{
 	background: green;
-	margin: 0px 0px;
+	margin: auto;
+
 }
 
 .black{
-	background: black;
+	/*background: rgb(20, 20, 70);*/
+	background-color: rgba(50, 50, 50, 0.95);
 	width: 50%;
-	height: inherit;
+	height: 100%;
 	float: left;
 	z-index: -1;
 	position: fixed;
@@ -22,7 +24,7 @@ body{
 .white{
 	background: white;
 	width: 50%;
-	height: inherit;
+	height: 100%;
 	float: left;
 	z-index: -1;
 	position: fixed;
@@ -33,18 +35,11 @@ body{
 
 .container{
 	z-index: 0;
-	/*margin-top: 500px;
-	position: absolute;
-	margin-top: 0 auto;*/
-	margin: 5%;
+	margin: 8%;
+	display: block;
 }
 
-/*.row{
-	margin: auto;
-}
-.col{
-	margin: auto;
-}*/
+/*-----------------------------------NAME----------------------*/
 .name{
 	color: white;
 	/*position: absolute;*/
@@ -57,16 +52,21 @@ body{
 	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35)
 }
 
+#sirname{
+		color: rgba(50, 50, 50, 0.9);
+}
+/*-----------------------------------NAME----------------------*/
 
+/*----------------------------------TERMINAL-------------------*/
 #terminal{
 	/*position: absolute;*/
 	z-index: 0;
 	height: 400px;
 	width: 50%;
-	/*max-width: 50%;*/
-	overflow: scroll;
-	/*background-color: rgba(55, 10, 3, 0.95);*/
-	background-color: rgba(0, 0, 0, 0.95);
+	overflow-y: auto;
+	background-color: rgba(55, 10, 3, 1);
+	background-color: rgba(60, 60, 60, 0.999);
+	/*background: rgb(20, 20, 70, 0.95);*/
 	color: rgb(255, 255, 255);
 	/*margin-bottom: 0px;
 	margin-top: 400px;*/
@@ -74,39 +74,20 @@ body{
 	box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.35);
 }
 
-.whiteButton{
-	color: white;
-	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.55)
-}
-
-.blackButton{
-	color: black;
-	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.55)
-}
-
-
-.heading{
-	margin-bottom: 0px;
-}
-
-p{
-	text-decoration-color: rgb(2, 255, 255);
-	font-family: monospace;
-	margin-bottom: 0px;
-}
-
-#demo{
-	margin-bottom: 0px;
-}
-
 #input{
 	border: none;
-	background-color: rgba(55, 10, 3, 0.1);
+	/*background-color: rgba(55, 10, 3, 0.1);*/
+	background-color: rgba(60, 60, 60, 0.999);
 	font-family: monospace;
 	width: inherit;
 	/*height: inherit;*/
 	margin-left: 4.5px;
 	padding-left: 0px;
+	outline: none;
+}
+
+.heading{
+	margin-bottom: 0px;
 }
 
 #newlyAdded{
@@ -118,6 +99,26 @@ p{
 	color: rgb(10, 225, 5);
 	font-family: monospace;
 	margin: 0px 0px;
+}
+/*----------------------------------TERMINAL-------------------*/
+
+/*------------------------------------LINKS---------------------*/
+.whiteButton{
+	color: white;
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.55)
+}
+
+.blackButton{
+	color: rgba(70, 70, 70, 0.999);
+	text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.55)
+}
+/*------------------------------------LINKS---------------------*/
+
+
+p{
+	text-decoration-color: rgb(2, 255, 255);
+	font-family: monospace;
+	margin-bottom: 0px;
 }
 
 .row:nth-child(3){
