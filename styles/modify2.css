@@ -49,11 +49,11 @@ body{
 	/*left: 35.75%;*/
 	font-size: 6em;
 	text-align: center;
-	text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.35)
+	text-shadow: 2px 2px 2.5px rgba(0, 0, 0, 0.55)
 }
 
 #sirname{
-		color: rgba(50, 50, 50, 0.9);
+		color: rgba(65, 65, 65, 1);
 }
 /*-----------------------------------NAME----------------------*/
 
@@ -64,7 +64,7 @@ body{
 	height: 400px;
 	width: 50%;
 	overflow-y: auto;
-	background-color: rgba(55, 10, 3, 1);
+	/*background-color: rgba(55, 10, 3, 1);*/
 	background-color: rgba(60, 60, 60, 0.999);
 	/*background: rgb(20, 20, 70, 0.95);*/
 	color: rgb(255, 255, 255);
@@ -73,6 +73,7 @@ body{
 	margin: 20px auto;
 	box-shadow: 5px 5px 15px 1px rgba(0, 0, 0, 0.35);
 }
+
 
 #input{
 	border: none;
