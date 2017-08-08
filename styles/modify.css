@@ -9,6 +9,7 @@ html,body{
 	background-color: rgba(55, 10, 3, 1);
 	color: rgb(255, 255, 255);
 	margin-bottom: 0px;
+	border-radius: 5px;
 }
 
 .heading{
