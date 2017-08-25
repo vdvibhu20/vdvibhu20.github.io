@@ -272,9 +272,23 @@ p{
 	font-size: 0.4em;
 }
 
-.sub-heading{
+.sub-heading a:link{
 	color: rgb(10, 225, 5);
-	font-size: 0.7em;
+	font-size: 0.9em;
+	outline: 0;
+	text-decoration: none
+}
+.sub-heading a:hover{
+	text-decoration: none;
+	color: rgb(10, 225, 5);
+}
+.sub-heading a:visited{
+	text-decoration: none;
+	color: rgb(10, 225, 5);
+}
+.sub-heading a:active{
+	text-decoration: none;
+	color: rgb(10, 225, 5);
 }
 /*-------------------------------WEB-RESUME--------------------*/
 
