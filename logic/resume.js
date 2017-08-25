@@ -6,95 +6,40 @@ var counter2;
 var queryRecord= [""];
 var terminalClone= $("#display").html();
 var docHeight= document.body.clientHeight;
-var webResume= document.getElementById('web-resume');
-var webResumeht= webResume.clientHeight;
 var backgroundFixTop= $('#background-top-bottom').offset().top;
+var backgroundFixHeight= $('#background-bottom-top').outerHeight(true);
 var winTop= $(window).scrollTop();
 var fixed= false;
-console.log(docHeight, webResumeht, webResume.scrollTop);
 var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-console.log(h);
 
 $(window).resize(function () {
-    console.log('resizing');
     backgroundFixTop= $('#background-top-bottom').offset().top;
+    backgroundFixHeight= $('#background-bottom-top').outerHeight(true);
     docHeight= document.body.clientHeight;
     h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     winTop= $(window).scrollTop();
 })
-// $('#web-resume').scroll(function (e) {
-// 	console.log('scroll started');
-// 	if(webResume.scrollTop== webResumeht){
-// 		console.log('scrolled');
-// 	}
-// })
-//
-//
-//
-// $('body').scroll(function (e) {
-// 	// console.log('windowScroll');
-//     var s = $(window).scrollTop(),
-//         d = $(document).height(),
-//         c = $(window).height();
-//
-//     var scrollPercent = (s / (d-c)) * 100;
-//     // console.log(scrollPercent);
-//     // var sc= $('body').scrollTop();
-//     // console.log(sc);
-//     var web= $('#web-resume');
-//     var offset= web.offset();
-//     // console.log(offset.top);
-//     if(offset.top< 70){
-//     	// web.css('position', 'fixed');
-//     	// web.css('top', '2%');
-//         $('#terminal-resume').css('position', 'fixed');
-//         $('#terminal-resume').css('top', '70px');
-// 	}
-// 	else{
-//     	// web.css('position', 'relative');
-// 	}
-// })
-
-// $(window).on('scroll', function () {
-// 	var winscroll= $(window).scrollTop();
-// 	var percent= winscroll/ docHeight;
-// 	if(percent> 0.94 && !fixed){
-// 		var margin= docHeight- winscroll;
-//         $('#web-resume').css('margin-top', margin.toString()+'px');
-//         $('#landing').css('bottom', (winscroll).toString()+'px');
-//         $('#landing').css('position', 'fixed');
-//         $('#landing').css('z-index', '100');
-//         window.scrollTo(0,0);// As landing is fixed so doc height reduces
-// 	}
-// 	else if(fixed)	{
-// 		$('#landing').css('position', 'static');
-// 	}
-// })
 
 $(window).on('scroll', function () {
 	winTop= $(window).scrollTop();
-    // backgroundFixTop= $('#background-top-bottom').offset();
-    // console.log(winTop, window.innerHeight);
 	if(winTop> backgroundFixTop){
 		if(!fixed){
             $('#background-top-bottom').addClass('fixed');
-            $('#footer').addClass('fixed');
+            $('#background-bottom-top').addClass('fixed');
             docHeight= document.body.clientHeight;
             fixed= true;
-            console.log('fixed');
-            // console.log(docHeight);
 		}
-		console.log('inFixing');
 	}
 	else {
         $('#background-top-bottom').removeClass('fixed');
-        console.log('removin fixed');
         fixed= false;
-        // $('#footer').removeClass('fixed');
 	}
 
-	if(Math.floor(winTop) == docHeight- h){
-        $('#footer').removeClass('fixed');
+	if($('#background-bottom-top').offset().top > $('#footer').offset().top){
+        $('#background-bottom-top').removeClass('fixed');
+	}
+	else if($(window).scrollBottom()> $('#footer').outerHeight(true)- backgroundFixHeight){
+        $('#background-bottom-top').addClass('fixed');
 	}
 
 
@@ -111,14 +56,13 @@ function queryProcess(event){
 		}
 
 		else if(event.which== '38'){
-			console.log("up");
+			// console.log("up");
 			up();
 		}
 
 		else if(event.which== '40'){
 			down();
 		}
-		// console.log("hi");
 }
 
 function up(){
@@ -126,7 +70,7 @@ function up(){
 			counter2--;
 			$("#input").val(queryRecord[counter2]);			
 		}
-		console.log("up");
+		// console.log("up");
 }
 
 function up(){
@@ -202,4 +146,7 @@ function queryResponse(){
 
 }
 
+$.fn.scrollBottom = function() {
+    return $(document).height() - this.scrollTop() - this.height();
+}
 
