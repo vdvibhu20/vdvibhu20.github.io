@@ -311,20 +311,22 @@ p{
 	justify-content: space-around;
 }
 
-/*#image{*/
-	/*flex:  1 2%;*/
-/*}*/
-
-/*#footer .links{*/
-	/*flex:  1 2%;*/
-/*}*/
-
 #image img{
 	width: 20vh;
 	height: 20vh;
 	border-radius: 50%;
 	border: 2px solid white;
 	box-shadow: 5px 0px 6px #cacaca;
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+
+	transition: all 0.5s;
+
+}
+
+#image img:hover{
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
 
 }
 
