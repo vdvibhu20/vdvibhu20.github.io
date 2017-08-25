@@ -311,22 +311,25 @@ p{
 	justify-content: space-around;
 }
 
-#image img{
-	width: 20vh;
-	height: 20vh;
-	border-radius: 50%;
+#image{
 	border: 2px solid white;
-	box-shadow: 5px 0px 6px #cacaca;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
+	border-radius: 50%;
+}
 
+#image img{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	box-shadow: 5px 0px 6px #cacaca;
+	-webkit-filter: blur(1px) grayscale(100%);
+	filter: blur(1px) grayscale(100%);
 	transition: all 0.5s;
 
 }
 
 #image img:hover{
-	-webkit-filter: grayscale(0%);
-	filter: grayscale(0%);
+	-webkit-filter: blur(0px) grayscale(20%);
+	filter: blur(0px) grayscale(20%);
 
 }
 
