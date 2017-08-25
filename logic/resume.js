@@ -93,13 +93,21 @@ function clear(){
 
 function queryResponse(){
 	choices= {
-		help: "about for about<br> skills for skills<br> course for courses<br> project  for projects<br> interests for interests<br> contact for contact details",
+		help: "about for about<br> skills for skills<br> experience for experience<br> course for courses<br> project  for projects<br> interests for interests<br> contact for contact details",
 		skills: "C|C++<br> JavaScript | HTML5 | CSS | MongoDB | SQL<br> Bootstrap | Semantic UI<br> jQuery | node.js<br> ADOBE PHOTOSHOP<br> PROGRAMMING TOOLS AND OS<br> Sublime Text | Git | Cloud9 | Linux | Windows",
 		interests: "Music | Guitar | Yoga",
 		about: "I am an undergraduate B.Tech student at the Department of Information Technology in Maharaja Surajmal Institute of Technology",
 		projects: "<strong>--Contact Directory | August(2016)</strong><br>* Implemented a TRIE which can store contact numbers with their names<br>* Other Data Structures offer high time complexity whereas tries can handle this in constant time.<br> <strong>--Incredible India Website | July(2016)</strong><br> * Created a tour website for tourist spots in India.<br>* Frontend: HTML5, CSS, JavaScript| Backend: JavaScript, node.js, MongoDB",
 		courses: "<strong>--Algorithms: Design and Analysis | Stanford University</strong><br> * Learned algorithms involving Graphs, Trees, Greedy Algorithms, and other Data Structures.<br> <strong>--WEB Development | UDEMY</strong><br> * HTML5 | CSS | JavaScript | node.js | MongoDB",
-		contact: "Mobile: 9958397988<br> Email: vdvibhu20@gmail.com"
+		contact: "Mobile: 9958397988<br> Email: vdvibhu20@gmail.com",
+		experience: "<strong>--Full Stack Web Developer </strong><br> " +
+							"<a href='http://www.swaniti.com/' class='user' target='_blank'>@Swaniti Initiative</a> | June 2017 - July 2017 <br>" +
+							"* Created Data Clean Tool for data collected via surveys conducted all over India. <br>" +
+							"* Maintained history of all operations performed using Data Clean Tool so user can revert back to previous state (Undo/Redo).<br>" +
+							"* Developed REST API and secured them using AWS Cognito sessions. <br>* " +
+							"Cleaned data was represented on India map using LeafletJs for detailed analysis. <br>" +
+							"* Tech Stack: NodeJs, JavaScript, AngularJs, Postgres",
+
 	}
 
 
@@ -130,7 +138,10 @@ function queryResponse(){
 							break;
 		
 		case "": 			toAppend="";
-							break;																								
+							break;
+
+		case "experience":	toAppend= choices.experience;
+							break;
 		
 		default: 		toAppend= "--"+ request+ ": command not found"
 	}
