@@ -6,7 +6,7 @@
 
 html{
 	/*height: 100vh;*/
-	overflow-y: auto;
+	overflow-y: hidden;
 	overflow-x: hidden;
 }
 body{
@@ -19,6 +19,29 @@ body{
 	/*margin: auto;*/
 
 /*}*/
+
+#load-background-top{
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	width: 100vw;
+	height: 50vh;
+	box-shadow: 0 1px 7px #232323;
+	transition: top 1.5s;
+}
+
+#load-background-bottom{
+	position: fixed;
+	z-index: 2;
+	top: 50vh;
+	width: 100vw;
+	height: 50vh;
+	transition: top 1.5s;
+}
+
+#load-background-bottom.shadow{
+	box-shadow: 1px 0 7px #232323;
+}
 
 #landing{
 	height: 100vh;

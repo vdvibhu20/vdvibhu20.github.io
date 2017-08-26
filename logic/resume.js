@@ -1,3 +1,6 @@
+
+
+
 var terminal= document.getElementById("terminal");
 var	request;	
 var toAppend;
@@ -11,6 +14,15 @@ var backgroundFixHeight= $('#background-bottom-top').outerHeight(true);
 var winTop= $(window).scrollTop();
 var fixed= false;
 var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+
+$(document).ready(function () {
+    console.log('loaded');
+    $('#load-background-bottom').addClass('shadow');
+    $('#load-background-top').css('top', '-55vh');
+    $('#load-background-bottom').css('top', docHeight+'px');
+
+    $('html').css('overflow-y', 'auto');
+});
 
 $(window).resize(function () {
     backgroundFixTop= $('#background-top-bottom').offset().top;
@@ -160,4 +172,5 @@ function queryResponse(){
 $.fn.scrollBottom = function() {
     return $(document).height() - this.scrollTop() - this.height();
 }
+
 
