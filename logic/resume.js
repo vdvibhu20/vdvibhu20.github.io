@@ -15,11 +15,10 @@ var winTop= $(window).scrollTop();
 var fixed= false;
 var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-$(document).ready(function () {
-    console.log('loaded');
+$(window).on('load', function () {
     $('#load-background-bottom').addClass('shadow');
     $('#load-background-top').css('top', '-55vh');
-    $('#load-background-bottom').css('top', docHeight+'px');
+    $('#load-background-bottom').css('top', '102vh');
 
     $('html').css('overflow-y', 'auto');
 });

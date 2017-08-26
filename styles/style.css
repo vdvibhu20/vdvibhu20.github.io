@@ -27,7 +27,7 @@ body{
 	width: 100vw;
 	height: 50vh;
 	box-shadow: 0 1px 7px #232323;
-	transition: top 1.5s;
+	transition: top 1.3s;
 }
 
 #load-background-bottom{
@@ -36,7 +36,7 @@ body{
 	top: 50vh;
 	width: 100vw;
 	height: 50vh;
-	transition: top 1.5s;
+	transition: top 1.3s;
 }
 
 #load-background-bottom.shadow{
