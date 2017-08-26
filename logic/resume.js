@@ -33,7 +33,7 @@ $(window).resize(function () {
 
 $(window).on('scroll', function () {
 	winTop= $(window).scrollTop();
-	if(winTop> backgroundFixTop){
+	if(winTop> backgroundFixTop){// if page is scolled (just crosses) background-top-bottom then fix respective items
 		if(!fixed){
             $('#background-top-bottom').addClass('fixed');
             $('#background-bottom-top').addClass('fixed');
