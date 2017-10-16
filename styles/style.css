@@ -260,6 +260,7 @@ p{
 	padding: 10vh 20vw;
 	/*height:90vh;*/
 	/*margin-bottom:;*/
+	text-align: justify;
 	background-color: rgb(250, 250, 250);
 	-webkit-box-shadow: inset 0 -7px 10px -9px #cccccc, inset 0 7px 10px -9px #cccccc;
 	-moz-box-shadow: inset 0 -7px 10px -9px #cccccc, inset 0 7px 10px -9px #cccccc;
