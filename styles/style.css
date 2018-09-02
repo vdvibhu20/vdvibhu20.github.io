@@ -20,6 +20,10 @@ body{
 
 /*}*/
 
+.green{
+	color: rgb(10, 225, 5);
+}
+
 #load-background-top{
 	position: fixed;
 	z-index: 2;
